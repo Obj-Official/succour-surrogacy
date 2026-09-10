@@ -19,8 +19,8 @@ import {
   Typography,
 } from "@mui/material";
 import { Grid, keyframes } from '@mui/system';
-import { ArrowForward, ArrowBack, CheckCircle, Close, Email, Facebook, Instagram, LinkedIn, LocationOn, Menu, Phone, Verified, Security, SupportAgentOutlined } from "@mui/icons-material";
-
+import { ArrowForward, ArrowBack, CheckCircle, Close, Email, Facebook, Instagram, LinkedIn, LocationOn, Menu, Phone, Verified, Security, SupportAgentOutlined, WhatsApp } from "@mui/icons-material";
+import WhatsAppButton from "../../components/whatsAppFab";
 
 
 const slideInUp = keyframes`
@@ -342,7 +342,7 @@ export default function HomePage() {
             }}
             sx={{
             backgroundColor: '#ececec',
-            paddingTop: {xs: '80px', md: '120px'},
+            paddingTop: {xs: '100px', md: '120px'},
             paddingBottom: '60px',
             px: { xs: 2, md: 4 },
             position: 'relative',
@@ -410,7 +410,7 @@ export default function HomePage() {
                             fontSize: '16px',
                             fontFamily: 'georgia',
                             textAlign: {xs:'center', md:'left'},
-                            lineHeight: 1.6,
+                            lineHeight: 2,
                             pb: 3,
                         }}
                     >
@@ -426,8 +426,8 @@ export default function HomePage() {
                             fontFamily: 'var(--font-nunito), sans-serif',
                             textAlign: 'center',
                             textTransform: 'none',
-                            px: {xs:1, md:2},
-                            py: {xs:0.5, md:1},
+                            px: 2,
+                            py: 1,
                             mr: 2,
                             borderRadius: '4px',
                         }}
@@ -443,8 +443,8 @@ export default function HomePage() {
                             fontFamily: 'var(--font-nunito), sans-serif',
                             textAlign: 'center',
                             textTransform: 'none',
-                            px: {xs:1, md:2},
-                            py: {xs:0.5, md:1},
+                            px: 2,
+                            py: 1,
                             borderRadius: '4px',
                         }}
                         >
@@ -536,7 +536,7 @@ export default function HomePage() {
           })}
         </Box>
       </Box>
-
+      <WhatsAppButton />
       <AnimatedBox
         component="section"
         id="aboutus"
@@ -683,16 +683,16 @@ export default function HomePage() {
                         sx={{ width: '200px', height: 'auto', borderRadius: '50%', mt: 2 }}
                     />
                     <>
-                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.8rem', md: '2rem' }, fontWeight: 800, mt: 2 }}>
-                    Dr Udoka Helen Chukwu
+                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.6rem', md: '2rem' }, fontWeight: 800, mt: 2 }}>
+                    Dr. Udoka Helen Chukwu
                     </Typography>
-                    <Typography sx={{ color: '#647875', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 700, mt: 1, textAlign:{xs: 'left'} }}>
+                    <Typography sx={{ color: '#647875', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 700, mt: 1 }}>
                     Founder and Director
                     </Typography>
                     </>
                 </Box>
                 <Typography sx={{ color: '#647875', fontFamily: 'Georgia, serif', lineHeight: 1.8, mt: 3 }}>
-                  With doctorates in Political Science, Business Leadership, and Human Resource Management, Dr Udoka Helen Chukwu leads Succour with deep HR expertise and a compassionate commitment to helping families overcome childlessness.
+                  With doctorates in Political Science, Business Leadership, and Human Resource Management, Dr. Udoka Helen Chukwu leads Succour with deep HR expertise and a compassionate commitment to helping families overcome childlessness.
                 </Typography>
                 <Typography sx={{ color: '#647875', fontFamily: 'Georgia, serif', lineHeight: 1.8, mt: 2 }}>
                   Her vision is a professional, empathetic, and seamless surrogacy experience where every person feels informed, respected, and genuinely supported.
@@ -712,7 +712,7 @@ export default function HomePage() {
                         sx={{ width: '200px', height: 'auto', borderRadius: '50%', mt: 2 }}
                     />
                     <>
-                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.8rem', md: '2.25rem' }, fontWeight: 800, mt: 2 }}>
+                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.6rem', md: '2.25rem' }, fontWeight: 800, mt: 2 }}>
                     Chiugu Ken-Okenini, ESQ.
                     </Typography>
                     <Typography sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 700, mt: 1 }}>
@@ -876,9 +876,9 @@ export default function HomePage() {
       </AnimatedBox>
 
       <Dialog open={eligibilityResult !== null} onClose={() => setEligibilityResult(null)} slotProps={{ paper: { sx: { borderRadius: 4, p: 2, maxWidth: 460 } } }}>
-        <DialogTitle sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 800 }}>{eligibilityResult ? 'You may be eligible' : 'Not eligible at this stage'}</DialogTitle>
+        <DialogTitle sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 800 }}>{eligibilityResult ? 'You may be eligible!' : 'Not eligible at this stage!'}</DialogTitle>
         <DialogContent sx={{ color: '#647875', fontFamily: 'Georgia, serif', lineHeight: 1.7 }}>{eligibilityResult ? 'Based on your answers, you meet our initial pre-screen criteria. Our team will need to complete a full medical, legal, and background assessment before confirming eligibility.' : 'Based on your answers, you do not meet our initial pre-screen criteria at this stage. Requirements can vary, so our team can still answer questions about your circumstances.'}</DialogContent>
-        <DialogActions><Button onClick={() => setEligibilityResult(null)} sx={{ color: '#d63a07', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 800 }}>Close</Button></DialogActions>
+        <DialogActions><Button onClick={() => setEligibilityResult(null)} sx={{ color: '#d63a07', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 800, mr: {xs: 1, md: 2} }}>Close</Button></DialogActions>
       </Dialog>
 
       <AnimatedBox
@@ -928,7 +928,7 @@ export default function HomePage() {
               value={contactForm.name}
               onChange={(event) => setContactForm((current) => ({ ...current, name: event.target.value }))}
               fullWidth
-              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '12px' }, }}
+              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '13px' }, }}
             />
             <TextField
               required
@@ -937,7 +937,7 @@ export default function HomePage() {
               value={contactForm.email}
               onChange={(event) => setContactForm((current) => ({ ...current, email: event.target.value }))}
               fullWidth
-              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '12px' }, }}
+              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '13px' }, }}
             />
             <TextField
               required
@@ -946,7 +946,7 @@ export default function HomePage() {
               value={contactForm.phone}
               onChange={(event) => setContactForm((current) => ({ ...current, phone: event.target.value }))}
               fullWidth
-              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '12px' }, }}
+              sx={{ '& .MuiOutlinedInput-root': { backgroundColor: '#fff', borderRadius: '50px', padding: '2px 12px', }, '& .MuiInputBase-input': { padding: '13px' }, }}
             />
             <TextField
               required
@@ -1000,9 +1000,10 @@ export default function HomePage() {
             <Grid size={{ xs: 12, md: 3 }}>
               <Typography sx={{ color: '#222', fontFamily: 'var(--font-nunito), sans-serif', fontSize: '1.3rem', fontWeight: 800, mb: 2 }}>Contact Us</Typography>
               <Box sx={{ display: 'grid', gap: 1.5 }}>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Email /><Typography sx={{ color: '#222' }}>Send us a message through the form</Typography></Box>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Phone /><Typography sx={{ color: '#222' }}>Request a consultation</Typography></Box>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><LocationOn /><Typography sx={{ color: '#222' }}>Supporting families across Nigeria</Typography></Box>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Email /><Typography sx={{ color: '#222' }}>succoursurrogacy@gmail.com</Typography></Box>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Phone /><Typography sx={{ color: '#222' }}>+234 705 239 9118</Typography></Box>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><WhatsApp /><Typography sx={{ color: '#222' }}>+234 706 546 9884</Typography></Box>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><LocationOn /><Typography sx={{ color: '#222' }}>Lagos, Nigeria</Typography></Box>
               </Box>
             </Grid>
           </Grid>

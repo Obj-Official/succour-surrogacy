@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     `;
 
     await sendEmail({
-      to: [{ email: 'davidezeani11@gmail.com', name: 'David Ezeani' }],
+      to: [{ email: 'succoursurrogacy@gmail.com', name: 'Succour Surrogacy Agency' }],
       subject: `New request: ${title}`,
       htmlContent,
     });

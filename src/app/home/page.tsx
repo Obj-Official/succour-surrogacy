@@ -683,7 +683,7 @@ export default function HomePage() {
                         sx={{ width: '200px', height: 'auto', borderRadius: '50%', mt: 2 }}
                     />
                     <>
-                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.6rem', md: '2rem' }, fontWeight: 800, mt: 2 }}>
+                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.4rem', md: '2rem' }, fontWeight: 800, mt: 2 }}>
                     Dr. Udoka Helen Chukwu
                     </Typography>
                     <Typography sx={{ color: '#647875', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 700, mt: 1 }}>
@@ -712,7 +712,7 @@ export default function HomePage() {
                         sx={{ width: '200px', height: 'auto', borderRadius: '50%', mt: 2 }}
                     />
                     <>
-                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.6rem', md: '2.25rem' }, fontWeight: 800, mt: 2 }}>
+                    <Typography variant="h3" sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontSize: { xs: '1.4rem', md: '2.25rem' }, fontWeight: 800, mt: 2 }}>
                     Chiugu Ken-Okenini, ESQ.
                     </Typography>
                     <Typography sx={{ color: '#165b52', fontFamily: 'var(--font-nunito), sans-serif', fontWeight: 700, mt: 1 }}>
@@ -1000,7 +1000,7 @@ export default function HomePage() {
             <Grid size={{ xs: 12, md: 3 }}>
               <Typography sx={{ color: '#222', fontFamily: 'var(--font-nunito), sans-serif', fontSize: '1.3rem', fontWeight: 800, mb: 2 }}>Contact Us</Typography>
               <Box sx={{ display: 'grid', gap: 1.5 }}>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Email /><Typography sx={{ color: '#222' }}>succoursurrogacy@gmail.com</Typography></Box>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Email /><Typography sx={{ color: '#222' }}>soccoursurrogacy@gmail.com</Typography></Box>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><Phone /><Typography sx={{ color: '#222' }}>+234 705 239 9118</Typography></Box>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><WhatsApp /><Typography sx={{ color: '#222' }}>+234 706 546 9884</Typography></Box>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}><LocationOn /><Typography sx={{ color: '#222' }}>Lagos, Nigeria</Typography></Box>
